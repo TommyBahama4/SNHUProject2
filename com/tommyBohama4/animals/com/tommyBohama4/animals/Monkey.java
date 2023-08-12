@@ -1,3 +1,4 @@
+package com.tommyBohama4.animals;
 
 public class Monkey extends RescueAnimal {
     private String species;
@@ -5,7 +6,8 @@ public class Monkey extends RescueAnimal {
     private String height;
     private String bodyLength;
 
-    public Monkey(String name, int age, String species, String tailLength, String height, String bodyLength) { 
+    public Monkey(String name, int age, String species, String tailLength, String height, String bodyLength) {
+        super(name, "monkey");
         setSpecies(species);
         setTailLength(tailLength);
         setHeight(height);

@@ -1,3 +1,4 @@
+package com.tommyBohama4.animals;
 
 public class Dog extends RescueAnimal {
 
@@ -6,9 +7,9 @@ public class Dog extends RescueAnimal {
 
     // Constructor
     public Dog(String name, String breed, String gender, String age,
-    String weight, String acquisitionDate, String acquisitionCountry,
-	String trainingStatus, boolean reserved, String inServiceCountry) {
-        setName(name);
+            String weight, String acquisitionDate, String acquisitionCountry,
+            String trainingStatus, boolean reserved, String inServiceCountry) {
+        super(name, "dog");
         setBreed(breed);
         setGender(gender);
         setAge(age);
