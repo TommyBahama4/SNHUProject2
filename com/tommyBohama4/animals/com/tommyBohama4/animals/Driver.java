@@ -3,8 +3,6 @@ package com.tommyBohama4.animals;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import com.tommyBohama4.animals.Dog;
-
 public class Driver {
     private static ArrayList<Dog> dogList = new ArrayList<Dog>();
     private static ArrayList<Monkey> monkeyList = new ArrayList<Monkey>();
