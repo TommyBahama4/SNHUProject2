@@ -6,6 +6,23 @@ public class Monkey extends RescueAnimal {
     private String height;
     private String bodyLength;
 
+    /**
+     * Default constructor for monkey
+     * 
+     * @param name
+     * @param gender
+     * @param age
+     * @param weight
+     * @param acquisitionDate
+     * @param acquisitionCountry
+     * @param trainingStatus
+     * @param reserved
+     * @param inServiceCountry
+     * @param species
+     * @param tailLength
+     * @param height
+     * @param bodyLength
+     */
     public Monkey(String name, String gender, String age,
             String weight, String acquisitionDate, String acquisitionCountry,
             String trainingStatus, boolean reserved, String inServiceCountry,
@@ -19,10 +36,16 @@ public class Monkey extends RescueAnimal {
         setBodyLength(bodyLength);
     }
 
+    /**
+     * @return the species of monkey
+     */
     public String getSpecies() {
         return species;
     }
 
+    /**
+     * @param species the species of monkey
+     */
     public void setSpecies(String species) {
         this.species = species;
     }
