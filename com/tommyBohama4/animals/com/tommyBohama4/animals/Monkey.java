@@ -6,8 +6,13 @@ public class Monkey extends RescueAnimal {
     private String height;
     private String bodyLength;
 
-    public Monkey(String name, int age, String species, String tailLength, String height, String bodyLength) {
-        super(name, "monkey");
+    public Monkey(String name, String gender, String age,
+            String weight, String acquisitionDate, String acquisitionCountry,
+            String trainingStatus, boolean reserved, String inServiceCountry,
+            String species, String tailLength, String height, String bodyLength) {
+        super(name, "monkey", gender, age, weight,
+                acquisitionDate, acquisitionCountry,
+                trainingStatus, reserved, inServiceCountry);
         setSpecies(species);
         setTailLength(tailLength);
         setHeight(height);

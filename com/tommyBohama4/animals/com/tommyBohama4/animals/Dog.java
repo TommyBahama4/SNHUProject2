@@ -9,17 +9,10 @@ public class Dog extends RescueAnimal {
     public Dog(String name, String breed, String gender, String age,
             String weight, String acquisitionDate, String acquisitionCountry,
             String trainingStatus, boolean reserved, String inServiceCountry) {
-        super(name, "dog");
+        super(name, "dog", gender, age, weight,
+                acquisitionDate, acquisitionCountry,
+                trainingStatus, reserved, inServiceCountry);
         setBreed(breed);
-        setGender(gender);
-        setAge(age);
-        setWeight(weight);
-        setAcquisitionDate(acquisitionDate);
-        setAcquisitionCountry(acquisitionCountry);
-        setTrainingStatus(trainingStatus);
-        setReserved(reserved);
-        setInServiceCountry(inServiceCountry);
-
     }
 
     // Accessor Method

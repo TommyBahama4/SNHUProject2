@@ -2,14 +2,10 @@ package com.tommyBohama4.animals;
 
 import java.lang.String;
 
-public class RescueAnimal {
+public class RescueAnimal extends animal {
 
 	// Instance variables
 	private String name;
-	private String animalType;
-	private String gender;
-	private String age;
-	private String weight;
 	private String acquisitionDate;
 	private String acquisitionCountry;
 	private String trainingStatus;
@@ -17,31 +13,16 @@ public class RescueAnimal {
 	private String inServiceCountry;
 
 	// Constructor
-	private RescueAnimal() {
-	};
-
-	protected RescueAnimal(String name) {
-		this.name = name;
-	}
-
 	protected RescueAnimal(String name, String animalType, String gender, String age,
 			String weight, String acquisitionDate, String acquisitionCountry,
 			String trainingStatus, boolean reserved, String inServiceCountry) {
+		super(animalType, gender, age, weight);
 		this.name = name;
-		this.animalType = animalType;
-		this.gender = gender;
-		this.age = age;
-		this.weight = weight;
 		this.acquisitionDate = acquisitionDate;
 		this.acquisitionCountry = acquisitionCountry;
 		this.trainingStatus = trainingStatus;
 		this.reserved = reserved;
 		this.inServiceCountry = inServiceCountry;
-	}
-
-	public RescueAnimal(@NotNull String name, @NotNull String animalType) {
-		this.name = name;
-		this.animalType = animalType;
 	}
 
 	public String getName() {
@@ -50,38 +31,6 @@ public class RescueAnimal {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getAnimalType() {
-		return animalType;
-	}
-
-	public void setAnimalType(String animalType) {
-		this.animalType = animalType;
-	}
-
-	public String getGender() {
-		return gender;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-
-	public String getAge() {
-		return age;
-	}
-
-	public void setAge(String age) {
-		this.age = age;
-	}
-
-	public String getWeight() {
-		return weight;
-	}
-
-	public void setWeight(String weight) {
-		this.weight = weight;
 	}
 
 	public String getAcquisitionDate() {
