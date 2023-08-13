@@ -8,23 +8,7 @@ public class Monkey extends RescueAnimal {
     private String height;
     private String bodyLength;
 
-    /**
-     * Default constructor for monkey
-     * 
-     * @param name
-     * @param gender
-     * @param age
-     * @param weight
-     * @param acquisitionDate
-     * @param acquisitionCountry
-     * @param trainingStatus
-     * @param reserved
-     * @param inServiceCountry
-     * @param species
-     * @param tailLength
-     * @param height
-     * @param bodyLength
-     */
+    // Constructor
     public Monkey(String name, String gender, String age,
             String weight, String acquisitionDate, String acquisitionCountry,
             String trainingStatus, boolean reserved, String inServiceCountry,
@@ -40,7 +24,7 @@ public class Monkey extends RescueAnimal {
     }
 
     /**
-     * @return the species of monkey
+     * @return String returns the species of monkey
      */
     public String getSpecies() {
         return species;
@@ -53,26 +37,50 @@ public class Monkey extends RescueAnimal {
         this.species = species;
     }
 
+    /**
+     * 
+     * @return length of monkey tail
+     */
     public String getTailLength() {
         return tailLength;
     }
 
+    /**
+     * 
+     * @param tailLength the length of the tail
+     */
     public void setTailLength(String tailLength) {
         this.tailLength = tailLength;
     }
 
+    /**
+     * 
+     * @return Monkey height
+     */
     public String getHeight() {
         return height;
     }
 
+    /**
+     * 
+     * @param height height of the monkey
+     */
     public void setHeight(String height) {
         this.height = height;
     }
 
+    /**
+     * 
+     * @return the monkey's body length
+     */
     public String getBodyLength() {
         return bodyLength;
     }
 
+    /**
+     * 
+     * @param bodyLength length of the body
+     */
     public void setBodyLength(String bodyLength) {
         this.bodyLength = bodyLength;
     }
