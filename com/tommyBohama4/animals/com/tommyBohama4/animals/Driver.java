@@ -5,19 +5,23 @@ import java.util.Scanner;
 
 public class Driver {
 
+    static char intakeNewDog = '1';
+    static char intakeNewMonkey = '2';
+    static char reserveAnimal = '3';
     static char displayDogList = '4';
     static char displayMonkeyList = '5';
     static char displayAllAnimals = '6';
+    static char quitApplication = 'q';
 
     static String menuDisplay = ("\n\n") +
             ("\t\t\t\tRescue Animal System Menu") +
-            ("\n[1] Intake a new dog") +
-            ("\n[2] Intake a new monkey") +
-            ("\n[3] Reserve an animal") +
+            ("\n[" + intakeNewDog + "] Intake a new dog") +
+            ("\n[" + intakeNewMonkey + "] Intake a new monkey") +
+            ("\n[" + reserveAnimal + "] Reserve an animal") +
             ("\n[" + displayDogList + "] Print a list of all dogs") +
             ("\n[" + displayMonkeyList + "] Print a list of all monkeys") +
             ("\n[" + displayAllAnimals + "] Print a list of all animals that are not reserved") +
-            ("\n[q] Quit application") +
+            ("\n[" + quitApplication + "] Quit application") +
             ("\nEnter a menu selection");
 
     public static void main(String[] args) {
@@ -31,15 +35,15 @@ public class Driver {
         do // loop until user exits application
         {
             option = getResponse(menuDisplay, input).charAt(0);
-            if (option == '1') { // intakeNewDog method is called
+            if (option == intakeNewDog) { // intakeNewDog method is called
                 intakeNewDog(input, data);
             }
 
-            else if (option == '2') { // intakeNewMonkey method is called
+            else if (option == intakeNewMonkey) { // intakeNewMonkey method is called
                 intakeNewMonkey(input, data);
             }
 
-            else if (option == '3') { // reserveAnimal method is called
+            else if (option == reserveAnimal) { // reserveAnimal method is called
                 reserveAnimal(input, data);
             }
 
@@ -55,7 +59,7 @@ public class Driver {
                 printAnimals(option, data);
             }
 
-            else if (option == 'q') { // exit message prints and application stops running
+            else if (option == quitApplication) { // exit message prints and application stops running
                 System.out.print("You have exited the application.");
                 break;
             }
@@ -140,31 +144,19 @@ public class Driver {
                 return;
             }
         }
-        System.out.println("What is the monkey's gender?"); // the following is to add a new monkey to the system
-        String gender = scanner.nextLine();
-        System.out.println("What is the monkey's age?");
-        String age = scanner.nextLine();
-        System.out.println("What is the monkey's weight?");
-        String weight = scanner.nextLine();
-        System.out.println("What is the monkey's acquisition date?");
-        String acquisitionDate = scanner.nextLine();
-        System.out.println("What is the monkey's acquisition country?");
-        String acquisitionCountry = scanner.nextLine();
-        System.out.println("What is the monkey's training status?");
-        String trainingStatus = scanner.nextLine();
-        System.out.println("Is this monkey reserved?");
-        boolean reserved = scanner.nextBoolean();
-        scanner.nextLine();
-        System.out.println("Which country is the monkey in service?");
-        String inServiceCountry = scanner.nextLine();
-        System.out.println("What is the monkey's species?");
-        String species = scanner.nextLine();
-        System.out.println("What is the tail length?");
-        String tailLength = scanner.nextLine();
-        System.out.println("What is the height?");
-        String height = scanner.nextLine();
-        System.out.println("What is the body length?");
-        String bodyLength = scanner.nextLine();
+        // the following is to add a new monkey to the system
+        String gender = getResponse("What is the monkey's gender?", scanner);
+        String age = getResponse("What is the monkey's age?", scanner);
+        String weight = getResponse("What is the monkey's weight?", scanner);
+        String acquisitionDate = getResponse("What is the monkey's acquisition date?", scanner);
+        String acquisitionCountry = getResponse("What is the monkey's acquisition country?", scanner);
+        String trainingStatus = getResponse("What is the monkey's training status?", scanner);
+        boolean reserved = Boolean.getBoolean(getResponse("Is this monkey reserved?", scanner));
+        String inServiceCountry = getResponse("Which country is the monkey in service?", scanner);
+        String species = getResponse("What is the monkey's species?", scanner);
+        String tailLength = getResponse("What is the tail length?", scanner);
+        String height = getResponse("What is the height?", scanner);
+        String bodyLength = getResponse("What is the body length?", scanner);
 
         Monkey monkey4 = new Monkey(name, gender, age, weight, acquisitionDate, acquisitionCountry, trainingStatus,
                 reserved, inServiceCountry, species, tailLength, height, bodyLength);

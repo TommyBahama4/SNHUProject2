@@ -27,6 +27,16 @@ public class Dog extends RescueAnimal {
 
     @Override
     public String toString() {
-        return ("\n" + this.getName() + "\n" + this.getBreed());
+        return ("\n" + this.getName() +
+                "\n" + this.getBreed()) +
+                "\n" + this.getGender() +
+                "\n" + this.getAge() +
+                "\n" + this.getWeight() +
+                "\n" + this.getAcquisitionDate() +
+                "\n" + this.getAcquisitionCountry() +
+                "\n" + this.getTrainingStatus() +
+                "\n" + this.getReserved() +
+                "\n" + this.getAcquisitionCountry() + "\n\n";
+
     }
 }

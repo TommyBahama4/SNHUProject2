@@ -82,4 +82,22 @@ public class Monkey extends RescueAnimal {
     public void setBodyLength(String bodyLength) {
         this.bodyLength = bodyLength;
     }
+
+    @Override
+    public String toString() {
+        return ("\n" + this.getName() +
+                "\n" + this.getGender() +
+                "\n" + this.getAge() +
+                "\n" + this.getWeight() +
+                "\n" + this.getAcquisitionDate() +
+                "\n" + this.getAcquisitionCountry() +
+                "\n" + this.getTrainingStatus() +
+                "\n" + this.getReserved() +
+                "\n" + this.getInServiceLocation() +
+                "\n" + this.getSpecies() +
+                "\n" + this.getTailLength() +
+                "\n" + this.getHeight() +
+                "\n" + this.getBodyLength() + "\n\n");
+
+    }
 }
