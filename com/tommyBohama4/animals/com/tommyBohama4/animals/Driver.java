@@ -9,17 +9,28 @@ public class Driver {
     static char displayMonkeyList = '5';
     static char displayAllAnimals = '6';
 
+    static String menuDisplay = ("\n\n") +
+            ("\t\t\t\tRescue Animal System Menu") +
+            ("\n[1] Intake a new dog") +
+            ("\n[2] Intake a new monkey") +
+            ("\n[3] Reserve an animal") +
+            ("\n[" + displayDogList + "] Print a list of all dogs") +
+            ("\n[" + displayMonkeyList + "] Print a list of all monkeys") +
+            ("\n[" + displayAllAnimals + "] Print a list of all animals that are not reserved") +
+            ("\n[q] Quit application") +
+            ("\nEnter a menu selection");
+
     public static void main(String[] args) {
         Repository data = new Repository();
+        initializeDogList(data);
+        initializeMonkeyList(data);
 
         Scanner input = new Scanner(System.in); // scanner class object
         char option;
 
         do // loop until user exits application
         {
-
-            displayMenu();
-            option = input.next().charAt(0);
+            option = getResponse(menuDisplay, input).charAt(0);
             if (option == '1') { // intakeNewDog method is called
                 intakeNewDog(input, data);
             }
@@ -58,21 +69,6 @@ public class Driver {
     static String getResponse(String inputRequested, Scanner scanner) {
         System.out.println(inputRequested);
         return scanner.nextLine();
-    }
-
-    // This method prints the menu options
-    public static void displayMenu() {
-        System.out.println("\n\n");
-        System.out.println("\t\t\t\tRescue Animal System Menu");
-        System.out.println("[1] Intake a new dog");
-        System.out.println("[2] Intake a new monkey");
-        System.out.println("[3] Reserve an animal");
-        System.out.println("[" + displayDogList + "] Print a list of all dogs");
-        System.out.println("[" + displayMonkeyList + "] Print a list of all monkeys");
-        System.out.println("[" + displayAllAnimals + "] Print a list of all animals that are not reserved");
-        System.out.println("[q] Quit application");
-        System.out.println();
-        System.out.println("Enter a menu selection");
     }
 
     // Adds dogs to a list for testing
