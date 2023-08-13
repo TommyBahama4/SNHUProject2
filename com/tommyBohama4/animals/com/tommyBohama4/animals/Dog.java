@@ -25,4 +25,14 @@ public class Dog extends RescueAnimal {
         breed = dogBreed;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null)
+            return false;
+        if (obj.getClass() == this.getClass())
+            return this.getName().toLowerCase().equals(((Dog) obj).getName().toLowerCase());
+        else if (obj.getClass() == String.class)
+            return this.getName().toLowerCase().equals(((String) obj).toLowerCase());
+        return false;
+    }
 }
