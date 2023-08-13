@@ -1,7 +1,5 @@
 package com.tommyBohama4.animals;
 
-import java.util.Scanner;
-
 public class Monkey extends RescueAnimal {
     private String species;
     private String tailLength;
